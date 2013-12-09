@@ -1,0 +1,227 @@
+@import bourbon/bourbon
+
+*
+  +box-sizing(border-box)
+
+$light-orange: #ff9634
+$orange: #fd6a07
+
+body
+  background: $orange
+  color: white
+
+.logo
+  +size(246px 400px)
+  position: relative
+  margin: 6% auto
+
+.head-brain
+  +size(206px)
+  +position(absolute, 20px 0 0 20px)
+  z-index: 2
+  background: white
+  border-radius: 50%
+
+.head-outline
+  +size(246px)
+  +position(absolute, 0px 0 0 0px)
+  background: $orange
+  border-radius: 50%
+  border: 10px solid white
+
+.head-inner-cover
+  +size(226px)
+  +position(absolute, 10px 0 0 10px)
+  z-index: 1
+  background: $orange
+  border-radius: 50%
+
+.chin-outline
+  +size(150px)
+  +position(absolute, 144px 0 0 46px)
+  background: $orange
+  border-radius: 50%
+  border: 9px solid white
+
+.head-face
+  +size(116px)
+  +position(absolute, 161px 0 0 63px)
+  z-index: 3
+  background: $orange
+  border-radius: 50%
+  border: 6px solid white
+
+.head-face-cover
+  +size(100px)
+  +position(absolute, 93px 0 0 72px)
+  z-index: 4
+  background: white
+  border-radius: 50%
+
+.mouth
+  +size(15px 3px)
+  +position(absolute, 254px 0 0 114px)
+  z-index: 4
+  background: white
+  border-radius: 3px
+
+.left-lens, .right-lens
+  +size(14px)
+  z-index: 4
+  background: $orange
+  border: 2px solid white
+  border-radius: 50%
+
+.left-lens
+  +position(absolute, 211px 0 0 101px)
+
+.right-lens
+  +position(absolute, 211px 0 0 129px)
+
+.left-lens-glare, .right-lens-glare
+  +size(4px)
+  +transform(rotate(-45deg))
+  z-index: 4
+  background: $orange
+  border-top: 2px solid white
+  border-radius: 50%
+
+.left-lens-glare
+  +position(absolute, 215px 0 0 105px)
+
+.right-lens-glare
+  +position(absolute, 215px 0 0 133px)
+
+.lens-bridge, .lens-bridge-cover
+  z-index: 4
+  background: $orange
+  border-radius: 50%
+
+.lens-bridge
+  +size(20px)
+  +position(absolute, 213px 0 0 112px)
+  border: 2px solid white
+
+.lens-bridge-cover
+  +size(26px)
+  +position(absolute, 219px 0 0 109px)
+
+.giant-gear
+  +size(280px)
+  +position(absolute, -18px 0 0 -17px)
+  +animation(spin 120s linear infinite)
+  background: white
+  border: 18px solid $light-orange
+  border-radius: 50%
+
+  .tooth
+    +size(22px 20px)
+    background: $light-orange
+
+    &:nth-child(1)
+      +position(absolute, 113px 0 0 261px)
+
+    &:nth-child(2)
+      +position(absolute, 113px 0 0 -39px)
+
+    &:nth-child(3)
+      +position(absolute, 262px 0 0 111px)
+      +transform(rotate(90deg))
+
+    &:nth-child(4)
+      +position(absolute, -38px 0 0 111px)
+      +transform(rotate(90deg))
+
+    &:nth-child(5)
+      +position(absolute, 7px 0 0 4px)
+      +transform(rotate(45deg))
+
+    &:nth-child(6)
+      +position(absolute, 219px 0 0 217px)
+      +transform(rotate(45deg))
+
+    &:nth-child(7)
+      +position(absolute, 219px 0 0 6px)
+      +transform(rotate(-45deg))
+
+    &:nth-child(8)
+      +position(absolute, 6px 0 0 217px)
+      +transform(rotate(-45deg))
+
+.gear, .gear-2, .gear-3
+  +size(64px)
+  +position(absolute, 72px 0 0 88px)
+  z-index: 5
+  background: white
+  border: 4px solid $orange
+  border-radius: 50%
+
+.gear
+  +position(absolute, 72px 0 0 88px)
+  +animation(spin 10s .3s linear infinite)
+
+.gear-2
+  +position(absolute, 111px 0 0 42px)
+  +animation(spin-alt 10s linear infinite)
+
+.gear-3
+  +position(absolute, 81px 0 0 147px)
+  +animation(spin-alt 10s .2s linear infinite)
+  +transform(scale(.6))
+
+.gear-spline
+  +size(10px)
+  +position(absolute, 23px 0 0 23px)
+  z-index: 5
+  background: $orange
+  border-radius: 50%
+
+.gear-2, .gear-3
+  .gear-spline
+    +transform(scale(1.5))
+
+.tooth
+  +size(8px 6px)
+  background: $orange
+
+  &:nth-child(1)
+    +position(absolute, 26px 0 0 59px)
+
+  &:nth-child(2)
+    +position(absolute, 26px 0 0 -11px)
+
+  &:nth-child(3)
+    +position(absolute, 60px 0 0 25px)
+    +transform(rotate(90deg))
+
+  &:nth-child(4)
+    +position(absolute, -10px 0 0 25px)
+    +transform(rotate(90deg))
+
+  &:nth-child(5)
+    +position(absolute, 0px 0 0 0px)
+    +transform(rotate(45deg))
+
+  &:nth-child(6)
+    +position(absolute, 50px 0 0 48px)
+    +transform(rotate(45deg))
+
+  &:nth-child(7)
+    +position(absolute, 50px 0 0 0px)
+    +transform(rotate(-45deg))
+
+  &:nth-child(8)
+    +position(absolute, 0px 0 0 48px)
+    +transform(rotate(-45deg))
+
++keyframes(spin)
+  0%
+    +transform(rotate(0deg))
+  100%
+    +transform(rotate(360deg))
+
++keyframes(spin-alt)
+  0%
+    +transform(rotate(0deg) scale(.6))
+  100%
+    +transform(rotate(-360deg) scale(.6))
