@@ -3,16 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-group :development do
-  gem 'sqlite3'
-end
-
-# Use postgres database for production
-gem 'pg'
-
 # Use slim for markup
 gem 'slim-rails'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -51,3 +44,14 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use sqlite3 as the database for Active Record
+group :development do
+  gem 'sqlite3'
+end
+
+# Use postgres database for production
+gem 'pg'
+
+# Use 12factor for serving static assets
+gem 'rails_12factor', group: :production
