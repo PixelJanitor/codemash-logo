@@ -53,5 +53,3 @@ end
 # Use postgres database for production
 gem 'pg'
 
-# Use 12factor for serving static assets
-gem 'rails_12factor', group: :production
